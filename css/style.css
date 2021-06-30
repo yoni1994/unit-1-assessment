@@ -16,7 +16,6 @@ html {
 }
 
 body {
-    margin: 0;
     background-color: gray;
     display: flex;
     justify-content: center;
@@ -24,5 +23,58 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    font-size: 25px;
+    --button-input-border: 6px solid #282828;
+    --button-input-bg: white;
+    --button-input-color: #282828;
+}
+
+body.light {
+    background-color: white;
+    --button-input-border: 6px solid lightgray;
+    --button-input-bg: #282828;
+    --button-input-color: lightgray;
+}
+
+button, input {
+    border: var(--button-input-border);
+    background-color: var(--button-input-bg);
+    color: var(--button-input-color)
+}
+
+.operator {
+    border-radius: 25%;
+    height: 10vmin;
+    width: 10vmin;
+    font-size: 5vmin;
+    text-align: center;
+}
+
+.math-input {
+    border-radius: 10px;
+    height: 10vmin;
+    width: 20vmin;
+    text-align: center;
+    font-size: 5vmin;
+    padding: 0;
+    margin: 0 20px;
+}
+
+#math-result {
+    font-size: 10vmin;
+    margin-bottom: 15vh;
+    font-weight: 600;
+}
+
+#reset, #light-dark-button {
+    border-radius: 10px;
+    height: 7vmin;
+    width: 20vmin;
+    text-align: center;
+    font-size: 2.8vmin;
+    padding: 0;
+    margin: 10px;
+}
+
+#fizzbuzz {
+    font-size: 20px;
 }
